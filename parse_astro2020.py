@@ -34,6 +34,7 @@ def search_missions(keywords_dict):
         luvoir = nltk.text.TokenSearcher(text).findall(r"<LUVOIR>")
         habex = nltk.text.TokenSearcher(text).findall(r"<HabEx>")
         origins = nltk.text.TokenSearcher(text).findall(r"<Origins> <Space> <Telescope>")
+        bdwarfs = nltk.text.TokenSearcher(text).findall(r"<brown> <dwarfs>")
 
         if len(lynx) > 0:
             print("{} makes {} explicit mentions of Lynx".format(key, len(lynx)))
@@ -44,8 +45,8 @@ def search_missions(keywords_dict):
         if len(habex) > 0:
             print("{} makes {} explicit mentions of HabEx".format(key, len(habex)))
 
-        if len(origins) > 0:
-            print("{} makes {} explicit mentions of Origins".format(key, len(origins)))
+        if len(bdwarfs) > 0:
+            print("{} makes {} explicit mentions of Brown Dwarfs".format(key, len(bdwarfs)))
 
 
 
